@@ -2,6 +2,7 @@ package mvn_demo;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -42,6 +43,8 @@ Thread.sleep(5000);
        
         System.out.println(">>>>>>>>>Inside Chrome Launch Test<<<<<<<<<<");
         System.out.println("All tests are passed 'Chrome_Launch'");
+        Assert.fail("failing it intentionally");
+        
         //close Fire fox
         driver.close();
 	
