@@ -41,6 +41,7 @@ Thread.sleep(5000);
         }
        
         System.out.println(">>>>>>>>>Inside Chrome Launch Test<<<<<<<<<<");
+        System.out.println("All tests are passed 'Chrome_Launch'");
         //close Fire fox
         driver.close();
 	

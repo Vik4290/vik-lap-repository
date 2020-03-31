@@ -46,6 +46,7 @@ public static Logger log = Logger.getLogger("devpinoyLogger");
 	{
 		System.out.println("Inside After Class");
 		log.debug("After Class Passed");
+	System.out.println("All tests are passed 'TestNg_Demo'");
 	}
 	@org.testng.annotations.BeforeTest
 	public void BeforeTest()
