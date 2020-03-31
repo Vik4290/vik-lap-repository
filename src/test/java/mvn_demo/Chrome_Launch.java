@@ -43,7 +43,7 @@ Thread.sleep(5000);
        
         System.out.println(">>>>>>>>>Inside Chrome Launch Test<<<<<<<<<<");
         System.out.println("All tests are passed 'Chrome_Launch'");
-        Assert.fail("failing it intentionally");
+        //Assert.fail("failing it intentionally");
         
         //close Fire fox
         driver.close();
