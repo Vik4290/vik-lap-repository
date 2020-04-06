@@ -13,7 +13,7 @@ import com.zom.pom.pages.LoginPage.LogInPage;
 public class Testcase1 {
 	
 	@Test
-	public void test1() throws InterruptedException
+	public void test1() throws Exception
 	{
 		HomePage hp=new HomePage();
 		LogInPage lp =  hp.gotoLogIn();
@@ -24,13 +24,13 @@ public class Testcase1 {
 		 
 		 CRM crm =lpp.gotoCRM();
 		 crm.CRMconfirmpage();
-		 
+		 Page.menu.Signout();
+			
 	}
 	
 	@AfterTest
 	public void tearDown()
 	{
-		Page.menu.Signout();
 		Page.driver.quit();
 	}
 	

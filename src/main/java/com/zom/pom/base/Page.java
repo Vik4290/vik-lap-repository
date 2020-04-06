@@ -67,13 +67,13 @@ public class Page {
 	public Page()
 	{
 		
-		PropertyConfigurator.configure(path);	
-	    log.debug("Property configured Successully");	
+		
 		if(driver==null)
 		{
 	
 	//******************* "Config" and "OR" properties Definition***********************		
-			
+			PropertyConfigurator.configure(path);	
+		    log.debug("Property configured Successully");			
 				try {
 				fis = new FileInputStream(System.getProperty("user.dir")
 						+ "\\src\\test\\resources\\Properties\\Config.properties");

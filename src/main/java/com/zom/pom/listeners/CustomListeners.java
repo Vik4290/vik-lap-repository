@@ -53,9 +53,8 @@ public class CustomListeners extends Page implements ITestListener,ISuiteListene
 
 		//***************Done with my code
 		
-		System.setProperty("org.uncommons.reportng.escape-output","false");
 		
-		//******************************XSLT report
+		//******************************TestNg report
 System.setProperty("org.uncommons.reportng.escape-output","false");
 		
 		String excepionMessage=Arrays.toString(result.getThrowable().getStackTrace());
@@ -86,6 +85,31 @@ System.setProperty("org.uncommons.reportng.escape-output","false");
 		Reporter.log("<a target=\"_blank\" href="+Utilities.screenshotName+"><img src="+Utilities.screenshotName+" height=200 width=200></img></a>");
 		
 		//rep.endTest(test);
+		rep.flush();
+		
+	}
+
+
+	public void onTestFailure(Exception e) {
+
+		//***************Done with my code
+		
+			
+		try {
+
+			Utilities.captureScreenshot();
+			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
+					MediaEntityBuilder.createScreenCaptureFromPath(Utilities.screenshotPath)
+							.build());
+		} 
+		catch (IOException ex) {
+
+		}
+		
+		String failureLogg="TEST CASE FAILED";
+		Markup m = MarkupHelper.createLabel(failureLogg, ExtentColor.RED);
+		testReport.get().log(Status.FAIL, m);
+		
 		rep.flush();
 		
 	}
