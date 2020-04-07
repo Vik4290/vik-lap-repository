@@ -79,13 +79,13 @@ System.setProperty("org.uncommons.reportng.escape-output","false");
 		testReport.get().log(Status.FAIL, m);
 		
 		//************Logs for ReportNg
-				
+/*				
 		Reporter.log("Click to see Screenshot");
 		Reporter.log("<a target=\"_blank\" href="+Utilities.screenshotName+">Screenshot</a>");
 		Reporter.log("<br>");
 		Reporter.log("<br>");
 		Reporter.log("<a target=\"_blank\" href="+Utilities.screenshotName+"><img src="+Utilities.screenshotName+" height=200 width=200></img></a>");
-		
+	*/	
 		//rep.endTest(test);
 		rep.flush();
 		

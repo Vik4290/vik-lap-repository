@@ -3,8 +3,7 @@
 <suite name="Suite1" verbose="1" >
 <listeners>
 		<listener class-name="com.zom.pom.listeners.CustomListeners"></listener>
-	      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+
 	</listeners>   
   <test name="Rough Test" >
     <classes>
