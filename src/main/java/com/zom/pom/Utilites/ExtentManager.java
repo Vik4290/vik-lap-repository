@@ -1,6 +1,9 @@
 package com.zom.pom.Utilites;
 
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -15,13 +18,14 @@ public class ExtentManager extends Page{
 	private static ExtentSparkReporter extentReporter;
 		
 	
-    public static ExtentReports createInstance(String fileName) {
+    public static ExtentReports createInstance(String fileName)  {
 
     	
     	//htmlReporter = new ExtentHtmlReporter("./reports/extent.html");
 
     			extentReporter = new ExtentSparkReporter(fileName);
-    			
+    	
+   			
     			extentReporter.config().setEncoding("utf-8");
     			extentReporter.config().setDocumentTitle("Vikram Automation Reports");
     			extentReporter.config().setReportName("Automation Test Results");

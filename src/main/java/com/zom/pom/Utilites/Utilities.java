@@ -25,12 +25,12 @@ public class Utilities extends Page
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 		Date d = new Date();
-		screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
+		screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".png";
 
 		FileUtils.copyFile(scrFile,
 				
-		new File(System.getProperty("user.dir") + "\\reports\\" + screenshotName));
-		screenshotPath= System.getProperty("user.dir") + "\\reports\\" + screenshotName;
+		new File(System.getProperty("user.dir") + "/reports/" + screenshotName));
+		screenshotPath= System.getProperty("user.dir") + "/reports/" + screenshotName;
 
 	
 	}
