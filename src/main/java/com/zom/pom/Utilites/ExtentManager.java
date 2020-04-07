@@ -31,6 +31,7 @@ public class ExtentManager extends Page{
     			extentReporter.config().setReportName("Automation Test Results");
     			extentReporter.config().setTheme(Theme.DARK);
     			
+   //ExtentReports(System.getProperty("user.dir")+"\\target\\surefire-reports\\html\\extent.html",true,DisplayOrder.OLDEST_FIRST);
     			extent = new ExtentReports();
     			extent.attachReporter(extentReporter);
 
