@@ -101,7 +101,7 @@ System.setProperty("org.uncommons.reportng.escape-output","false");
 
 			Utilities.captureScreenshot();
 			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
-					MediaEntityBuilder.createScreenCaptureFromPath(Utilities.screenshotPath)
+					MediaEntityBuilder.createScreenCaptureFromPath(Utilities.screenshotName)
 							.build());
 		} 
 		catch (IOException ex) {
