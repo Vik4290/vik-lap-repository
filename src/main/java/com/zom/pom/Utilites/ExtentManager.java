@@ -27,7 +27,6 @@ public class ExtentManager extends Page{
     			extentReporter.config().setReportName("Automation Test Results");
     			extentReporter.config().setTheme(Theme.DARK);
     			
-
     			extent = new ExtentReports();
     			extent.attachReporter(extentReporter);
 

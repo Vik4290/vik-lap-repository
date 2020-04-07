@@ -67,7 +67,9 @@ System.setProperty("org.uncommons.reportng.escape-output","false");
 			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
 					MediaEntityBuilder.createScreenCaptureFromPath(Utilities.screenshotPath)
 							.build());
-				} 
+		
+			
+		} 
 		catch (IOException e) {
 
 		}
@@ -150,17 +152,17 @@ System.setProperty("org.uncommons.reportng.escape-output","false");
 		if (extent != null) {
 
 			extent.flush();
-	
+	/*
 			Date date = new Date();
 			String filePathdate = date.toString().replace(":", "_").replace(" ", "_");
 			
 			String filename = "index.html";
 			//System.getProperty("user.dir")+"\\reports\\"+fileName
 		
-			String actualReportPath = System.getProperty("user.dir") + "\\reports\\" + filename;
+			String actualReportPath = System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + filename;
 			
-					new File(actualReportPath).renameTo(new File(System.getProperty("user.dir") + "\\reports\\" + "Extent_Report" +"-" + filePathdate + ".html"));
-	
+					new File(actualReportPath).renameTo(new File(System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + "Extent_Report" +"-" + filePathdate + ".html"));
+	*/
 	/*	
 		MonitoringMail mail = new MonitoringMail();
 		 

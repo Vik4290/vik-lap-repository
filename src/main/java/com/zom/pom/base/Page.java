@@ -48,7 +48,10 @@ public class Page {
 			System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\testdata.xlsx");
 	public static WebDriverWait wait;
 	public static ExtentReports extent;
-	public static ExtentReports rep = ExtentManager.createInstance("./reports/extent.html");
+	//public static ExtentReports rep = ExtentManager.createInstance(System.getProperty("user.dir") + "./reports/extent.html");
+	
+	public static ExtentReports rep = ExtentManager.createInstance(System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\index.html");
+	
 	public static ExtentTest test;
 	
 	//--------Need to check this
