@@ -32,9 +32,13 @@ public class Utilities extends Page
 		//new File(System.getProperty("user.dir") + "/reports/" + screenshotName));
 		//screenshotPath= System.getProperty("user.dir") + "/reports/" + screenshotName;
 
-		new File(System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName));
+/*		new File(System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName));
 		screenshotPath= System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName;
-	
+	*/
+		new File("C:\\Users\\Vikram\\Vik_POM\\com.zom.pom\\target\\surefire-reports\\html\\" + screenshotName));
+		screenshotPath= "C:\\Users\\Vikram\\Vik_POM\\com.zom.pom\\target\\surefire-reports\\html\\" + screenshotName;
+		
+		
 	}
 
 	@DataProvider(name="dp")
