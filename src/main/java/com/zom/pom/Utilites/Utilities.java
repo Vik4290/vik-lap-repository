@@ -32,11 +32,11 @@ public class Utilities extends Page
 		//new File(System.getProperty("user.dir") + "/reports/" + screenshotName));
 		//screenshotPath= System.getProperty("user.dir") + "/reports/" + screenshotName;
 
-		//new File(System.getProperty("user.dir") + "/target/surefire-reports/html/" + screenshotName));
-		//screenshotPath= System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName;
+		new File(System.getProperty("user.dir") + "/target/surefire-reports/html/" + screenshotName));
+		screenshotPath= System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName;
 	
-		new File("./target/surefire-reports/html/" + "img1.png"));
-		screenshotPath= System.getProperty("user.dir") + "./target/surefire-reports/html/" + screenshotName;
+		//new File("./target/surefire-reports/html/" + "img1.png"));
+		//screenshotPath= System.getProperty("user.dir") + "./target/surefire-reports/html/" + screenshotName;
 		
 	}
 

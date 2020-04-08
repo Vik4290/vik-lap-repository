@@ -63,11 +63,18 @@ System.setProperty("org.uncommons.reportng.escape-output","false");
 		
 		try {
 
-			Utilities.captureScreenshot();
+			/*Utilities.captureScreenshot();
 			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
 					MediaEntityBuilder.createScreenCaptureFromPath("img1.png")
-							.build());
+							.build());*/
 		
+
+			Utilities.captureScreenshot();
+			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
+					MediaEntityBuilder.createScreenCaptureFromPath(Utilities.screenshotName)
+							.build());
+		System.out.println(Utilities.screenshotName);
+			
 			
 		} 
 		catch (IOException e) {
