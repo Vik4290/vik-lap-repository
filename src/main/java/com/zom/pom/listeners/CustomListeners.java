@@ -63,17 +63,17 @@ public class CustomListeners extends Page implements ITestListener,ISuiteListene
 		
 		try {
 
-			Utilities.captureScreenshot();
+		/*	Utilities.captureScreenshot();
 			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
 					MediaEntityBuilder.createScreenCaptureFromPath(Utilities.screenshotName)
 							.build());
-		
-			
-		/*	Utilities.captureScreenshot();
-			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
-					MediaEntityBuilder.createScreenCaptureFromPath("./reports/screenshots/" + Utilities.screenshotName)
-							.build());
 		*/
+			
+			Utilities.captureScreenshot();
+			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
+					MediaEntityBuilder.createScreenCaptureFromPath("../screenshots/" + Utilities.screenshotName)
+							.build());
+		
 			
 		} 
 		catch (IOException e) {
