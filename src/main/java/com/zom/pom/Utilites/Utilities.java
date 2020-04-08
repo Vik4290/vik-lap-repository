@@ -29,8 +29,8 @@ public class Utilities extends Page
 
 		FileUtils.copyFile(scrFile,
 				
-		new File(System.getProperty("user.dir") + "/reports/screenshots/" + screenshotName));
-		screenshotPath= System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName;
+		new File(System.getProperty("user.dir") + "/reports/" + screenshotName));
+		//screenshotPath= System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName;
 	
 		
 	}
