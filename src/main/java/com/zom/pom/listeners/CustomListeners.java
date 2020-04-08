@@ -55,26 +55,25 @@ public class CustomListeners extends Page implements ITestListener,ISuiteListene
 		
 		
 		//******************************TestNg report
-System.setProperty("org.uncommons.reportng.escape-output","false");
+		System.setProperty("org.uncommons.reportng.escape-output","false");
 		
 		String excepionMessage=Arrays.toString(result.getThrowable().getStackTrace());
 		testReport.get().fail("<details>" + "<summary>" + "<b>" + "<font color=" + "red>" + "Exception Occured:Click to see"
 				+ "</font>" + "</b >" + "</summary>" +excepionMessage.replaceAll(",", "<br>")+"</details>"+" \n");
 		
 		try {
-
-			/*Utilities.captureScreenshot();
-			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
-					MediaEntityBuilder.createScreenCaptureFromPath("img1.png")
-							.build());*/
-		
-
+/*
 			Utilities.captureScreenshot();
 			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
 					MediaEntityBuilder.createScreenCaptureFromPath(Utilities.screenshotName)
 							.build());
-		System.out.println(Utilities.screenshotName);
+	*/		
 			
+			Utilities.captureScreenshot();
+			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
+					MediaEntityBuilder.createScreenCaptureFromPath("../reports/screenshots/" + Utilities.screenshotName)
+							.build());
+		
 			
 		} 
 		catch (IOException e) {
