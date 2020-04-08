@@ -1,7 +1,7 @@
-08/04/2020 19:54:53 devpinoyLogger Property configured Successully
-08/04/2020 19:54:53 devpinoyLogger Config file loaded !!!
-08/04/2020 19:54:53 devpinoyLogger OR file loaded !!!
-08/04/2020 19:55:15 devpinoyLogger Navigated to : http://www.zoho.com/
-08/04/2020 19:55:27 devpinoyLogger Clicking on an Element : gotoLogin_XPATH
-08/04/2020 19:55:27 devpinoyLogger Navigate to LogIn Page
-08/04/2020 19:55:27 devpinoyLogger Inside Test1 Testcase
+08/04/2020 20:03:15 devpinoyLogger Property configured Successully
+08/04/2020 20:03:15 devpinoyLogger Config file loaded !!!
+08/04/2020 20:03:15 devpinoyLogger OR file loaded !!!
+08/04/2020 20:03:33 devpinoyLogger Navigated to : http://www.zoho.com/
+08/04/2020 20:03:47 devpinoyLogger Clicking on an Element : gotoLogin_XPATH
+08/04/2020 20:03:47 devpinoyLogger Navigate to LogIn Page
+08/04/2020 20:03:47 devpinoyLogger Inside Test1 Testcase
