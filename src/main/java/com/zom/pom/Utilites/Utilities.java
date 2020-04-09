@@ -2,6 +2,7 @@ package com.zom.pom.Utilites;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Date;
@@ -24,9 +25,24 @@ public class Utilities extends Page
 
 	public static String captureScreenshot() throws IOException {
 
-	
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	    String encodedBase64 = null;
+	    FileInputStream fileInputStreamReader = null;
+	    try {
+	        fileInputStreamReader = new FileInputStream(scrFile);
+	        byte[] bytes = new byte[(int)scrFile.length()];
+	        fileInputStreamReader.read(bytes);
+	        encodedBase64 = new String(Base64.encodeBase64(bytes));
+	    } catch (FileNotFoundException e) {
+	        e.printStackTrace();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	    return "data:image/png;base64,"+encodedBase64;
 		
-		Date d = new Date();
+		
+		
+	/*	Date d = new Date();
 		screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".png";
 
 
@@ -40,20 +56,20 @@ fileInputStreamReader = new FileInputStream(sourceFile);
 byte[] bytes = new byte[(int)sourceFile.length()];
 fileInputStreamReader.read(bytes);
 encodedBase64 = new String(Base64.encodeBase64(bytes));
-
+*/
        /* String screenShotDestination = createScreeshotFolderStructure()+"/"+
                 imageName.trim().replace(" ","_") + ".png";
 
         File destination = new File(screenShotDestination);
         FileUtils.copyFile(sourceFile, destination);
-*/
+*//*
 FileUtils.copyFile(sourceFile,new File(System.getProperty("user.dir") + "/reports/" + screenshotName));
 
     } catch (IOException e) {
         e.printStackTrace();
     }
     return "data:image/png;base64,"+encodedBase64;
-		
+	*/	
 		
 		
 		/*	File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
