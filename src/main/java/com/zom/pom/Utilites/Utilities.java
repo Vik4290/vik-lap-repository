@@ -47,7 +47,7 @@ encodedBase64 = new String(Base64.encodeBase64(bytes));
         File destination = new File(screenShotDestination);
         FileUtils.copyFile(sourceFile, destination);
 */
-FileUtils.copyFile(sourceFile,new File(System.getProperty("user.dir") + "/reports/screenshots/" + screenshotName));
+FileUtils.copyFile(sourceFile,new File(System.getProperty("user.dir") + "/reports/" + screenshotName));
 
     } catch (IOException e) {
         e.printStackTrace();
