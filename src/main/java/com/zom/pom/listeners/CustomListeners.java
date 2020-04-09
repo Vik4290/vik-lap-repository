@@ -69,7 +69,7 @@ public class CustomListeners extends Page implements ITestListener,ISuiteListene
 							.build());
 		*/
 			
-			Utilities.captureScreenshot();
+			//Utilities.captureScreenshot();
 			testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
 					MediaEntityBuilder.createScreenCaptureFromBase64String(Utilities.captureScreenshot())
 							.build());
